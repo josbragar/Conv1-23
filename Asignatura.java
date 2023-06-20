@@ -1,0 +1,5 @@
+package us.dit.fs.clase.model;
+
+public enum Asignatura {
+	MATEMATICAS, LENGUA, BIOLOGIA, SOCIALES, FISICA, QUIMICA, HISTORIA, LITERATURA, ARTE, MUSICA, PE, PROGRAMACION
+}
