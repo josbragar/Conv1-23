@@ -63,13 +63,17 @@ class EstadisticasAlumnoTest {
 		Alumno alumno3 = new Alumno("uvus03", "clase");
 		Alumno alumno4 = new Alumno("uvus04", "clase");
 
-		// Notas de ejemplo para el alumno y sus compañeros
+	        // Notas de ejemplo para el alumno y sus compañeros
 		// La media de la nota de matemáticas es 7,125, por tanto el alumno uvus01 tiene
 		// de diferencia -1,625 (por debajo de la media)
 		// La media de la nota de lengua es 7,25, por tanto el alumno uvus01 tiene 1,75
 		// de diferencia (por encima de la media)
 		// En matemáticas el alumno uvus01 es el peor de clase, cuartil 1
 		// En lengua el alumno uvus01 es el mejor de clase, cuartil 4
+		
+		// La media de notas del alumno es 7,25
+		// La media de notas de la clase es 7,19
+		// En el conjunto de las asignaturas, cuartil por clase, uvus01 está en el cuartil 3
 
 		alumno1.setNotaAsignatura(Asignatura.MATEMATICAS, 5.5);
 		alumno2.setNotaAsignatura(Asignatura.MATEMATICAS, 6);
