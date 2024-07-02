@@ -17,12 +17,10 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation libs.junit.jupiter
-
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
     // This dependency is used by the application.
-    implementation libs.guava
+    implementation 'com.google.guava:guava:30.1.1-jre'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
     testImplementation 'org.junit.platform:junit-platform-engine:1.9.3'
     testImplementation 'org.mockito:mockito-core:2.1.0'
@@ -38,7 +36,8 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'org.example.App'
+    mainClass = 'us.dit.fs.clase.App'
+
 }
 
 tasks.named('test') {
