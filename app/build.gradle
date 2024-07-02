@@ -23,6 +23,10 @@ dependencies {
 
     // This dependency is used by the application.
     implementation libs.guava
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+    testImplementation 'org.junit.platform:junit-platform-engine:1.9.3'
+    testImplementation 'org.mockito:mockito-core:2.1.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.4.0'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

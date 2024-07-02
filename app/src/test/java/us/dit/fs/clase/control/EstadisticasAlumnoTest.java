@@ -11,7 +11,7 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 
 import java.util.List;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -51,6 +51,7 @@ class EstadisticasAlumnoTest {
 	/**
 	 * @throws java.lang.Exception
 	 */
+
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 
@@ -121,14 +122,15 @@ class EstadisticasAlumnoTest {
 	@Test
 	void testObtenerMediaNotas() {
 		//Configurar comportamiento del MOCK
-		
+		alumnoDAO = Mockito.mock(AlumnoDAO.class);
 	
 		// Crear instancia de EstadisticasAlumno con el mock de AlumnoDAO
-		
-		//Invocar métdo a probar
-		
+		EstadisticasAlumno estadisticasAlumno = new EstadisticasAlumno(alumnoDAO);
+		//Invocar método a probar
+		Mockito.when(estadisticasAlumno.obtenerMediaNotas("uvus01")).thenReturn(7.25);
 
 		//Escribir verificaciones
+		assertEquals(7.25,estadisticasAlumno.obtenerMediaNotas("uvus01"),"Error");
 	}
 
 	/**
