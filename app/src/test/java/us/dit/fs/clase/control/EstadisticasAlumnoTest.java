@@ -123,14 +123,16 @@ class EstadisticasAlumnoTest {
 	void testObtenerMediaNotas() {
 		//Configurar comportamiento del MOCK
 		alumnoDAO = Mockito.mock(AlumnoDAO.class);
+		when(alumnoDAO.getAlumnoByUvus(Mockito.anyString())).thenReturn(alumno1);
 	
 		// Crear instancia de EstadisticasAlumno con el mock de AlumnoDAO
 		EstadisticasAlumno estadisticasAlumno = new EstadisticasAlumno(alumnoDAO);
 		//Invocar método a probar
-		Mockito.when(estadisticasAlumno.obtenerMediaNotas("uvus01")).thenReturn(7.25);
+		double media = estadisticasAlumno.obtenerMediaNotas("uvus01");
 
 		//Escribir verificaciones
-		assertEquals(7.25,estadisticasAlumno.obtenerMediaNotas("uvus01"),"Error");
+		assertEquals(7.25,media,"Error de test");
+		verify(alumnoDAO,atMostOnce()).getAlumnoByUvus(uvusCaptor.capture());
 	}
 
 	/**
