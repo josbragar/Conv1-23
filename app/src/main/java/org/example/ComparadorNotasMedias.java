@@ -1,7 +1,7 @@
 /**
  * 
  */
-package us.dit.fs.clase.control;
+package org.example;
 
 import java.util.ArrayList;
 /**
@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import us.dit.fs.clase.model.Alumno;
-import us.dit.fs.clase.model.Asignatura;
+import org.example.Alumno;
+import org.example.Asignatura;
 
 public class ComparadorNotasMedias implements Comparator<Alumno> {
 

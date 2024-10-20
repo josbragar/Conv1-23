@@ -1,15 +1,15 @@
 /**
  * 
  */
-package us.dit.fs.clase.control;
+package org.example;
 
 /**
  * @author Isabel Román
  *
  */
 import java.util.Comparator;
-import us.dit.fs.clase.model.Alumno;
-import us.dit.fs.clase.model.Asignatura;
+import org.example.Alumno;
+import org.example.Asignatura;
 
 public class ComparadorNotasAsignatura implements Comparator<Alumno> {
 	private Asignatura asignatura;

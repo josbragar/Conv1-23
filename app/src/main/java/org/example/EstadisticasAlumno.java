@@ -1,7 +1,7 @@
 /**
  * 
  */
-package us.dit.fs.clase.control;
+package org.example;
 
 /**
  * @author  Isabel Román
@@ -10,9 +10,9 @@ package us.dit.fs.clase.control;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import us.dit.fs.clase.model.AlumnoDAO;
-import us.dit.fs.clase.model.Alumno;
-import us.dit.fs.clase.model.Asignatura;
+import org.example.AlumnoDAO;
+import org.example.Alumno;
+import org.example.Asignatura;
 
 public class EstadisticasAlumno {
 	private AlumnoDAO alumnoDAO;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package us.dit.fs.clase.model;
+package org.example;
 
 /**
  * @author Isabel Román

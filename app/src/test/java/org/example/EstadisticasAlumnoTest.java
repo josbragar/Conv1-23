@@ -1,7 +1,7 @@
 /**
  * 
  */
-package us.dit.fs.clase.control;
+package org.example;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.atLeast;
@@ -25,9 +25,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import us.dit.fs.clase.model.AlumnoDAO;
-import us.dit.fs.clase.model.Asignatura;
-import us.dit.fs.clase.model.Alumno;
+import org.example.AlumnoDAO;
+import org.example.Asignatura;
+import org.example.Alumno;
 
 /**
  * @author Isabel Román
