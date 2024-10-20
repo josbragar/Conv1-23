@@ -109,14 +109,15 @@ class EstadisticasAlumnoTest {
 		//Configurar comportamiento del MOCK
 		alumnoDAO = Mockito.mock(AlumnoDAO.class);
 		when(alumnoDAO.getAlumnoByUvus(Mockito.anyString())).thenReturn(alumno1);
+		when(alumnoDAO.getAlumnosByClase(Mockito.anyString())).thenReturn(alumnos);
 	
 		// Crear instancia de EstadisticasAlumno con el mock de AlumnoDAO
 		EstadisticasAlumno estadisticasAlumno = new EstadisticasAlumno(alumnoDAO);
 		//Invocar métdo a probar
-		List<Alumno> listaAlumno = estadisticasAlumno.obtenerClase("clase");
+		List<Alumno> listaAlumno = estadisticasAlumno.obtenerClase("uvus01");
 
 		//Escribir verificaciones
-		assertEquals(1,listaAlumno.size(),"Error de test");
+		assertEquals(4,listaAlumno.size(),"Error de test");
 		verify(alumnoDAO,atMostOnce()).getAlumnoByUvus(uvusCaptor.capture());
 	}
 
