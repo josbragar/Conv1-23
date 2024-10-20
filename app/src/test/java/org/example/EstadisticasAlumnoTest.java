@@ -107,14 +107,17 @@ class EstadisticasAlumnoTest {
 	@Test
 	void testEstadisticasAlumno() {
 		//Configurar comportamiento del MOCK
-		
+		alumnoDAO = Mockito.mock(AlumnoDAO.class);
+		when(alumnoDAO.getAlumnoByUvus(Mockito.anyString())).thenReturn(alumno1);
 	
 		// Crear instancia de EstadisticasAlumno con el mock de AlumnoDAO
-		
+		EstadisticasAlumno estadisticasAlumno = new EstadisticasAlumno(alumnoDAO);
 		//Invocar métdo a probar
-		
+		List<Alumno> listaAlumno = estadisticasAlumno.obtenerClase("clase");
 
 		//Escribir verificaciones
+		assertEquals(1,listaAlumno.size(),"Error de test");
+		verify(alumnoDAO,atMostOnce()).getAlumnoByUvus(uvusCaptor.capture());
 	}
 
 	/**
@@ -124,14 +127,17 @@ class EstadisticasAlumnoTest {
 	@Test
 	void testObtenerMediaNotas() {
 		//Configurar comportamiento del MOCK
-		
-	
+		alumnoDAO = Mockito.mock(AlumnoDAO.class);
+		when(alumnoDAO.getAlumnoByUvus(Mockito.anyString())).thenReturn(alumno1);
+
 		// Crear instancia de EstadisticasAlumno con el mock de AlumnoDAO
-		
-		//Invocar métdo a probar
-		
+		EstadisticasAlumno estadisticasAlumno = new EstadisticasAlumno(alumnoDAO);
+		//Invocar método a probar
+		double media = estadisticasAlumno.obtenerMediaNotas("uvus01");
 
 		//Escribir verificaciones
+		assertEquals(7.25,media,"Error de test");
+		verify(alumnoDAO,atMostOnce()).getAlumnoByUvus(uvusCaptor.capture());
 	}
 
 	/**
